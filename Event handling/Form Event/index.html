@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      *{
+        padding: 0px;
+        margin: 0px;
+      }
+      body{
+        background-color: palegoldenrod;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        padding-top: 12vh;
+      }
+      body > div{
+        background-color: aliceblue;
+        padding: 36px;
+        border-radius: 23px;
+      }
+      form{
+        width: 250px;
+      }
+      .form-group{
+        margin-top: 10px;
+      }
+      .form-group > label{
+        display: block;
+      }
+      .form-group > fieldset {
+        border: none;
+      }
+      input[type="text"],input[type="email"],select{
+        width: 100%;
+        outline: none;
+        font-size: 12px;
+        padding: 4px;
+      }
+      .form-group:last-of-type > button{
+        width: 60px;
+        height: 30px;
+        background-color: black;
+        color: white;
+      }
+      .form-group:last-of-type > button:hover{
+        background-color: gray;
+      }
+    </style>
+</head>
+<body>
+    <div>
+      <h1>Form Events</h1>
+    <form action="#" autocomplete="off">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email">
+      </div>
+      <div class="form-group">
+        <label for="course">Course</label>
+        <select name="course" id="course">
+          <option value="">Select Option</option>
+          <option value="C">C</option>
+          <option value="Java">Java</option>
+          <option value="Python">Python</option>
+          <option value="JavaScript">JavaScript</option>
+        </select>
+      </div>
+      <div class="form-group">
+          <fieldset>
+            <legend>Gender</legend>
+            <label ><input type="radio" name="gender" value="male">Male</label>
+            <label ><input type="radio" name="gender" value="female">Female</label>
+          </fieldset>
+      </div>
+      <div class="form-group">
+        
+        <label for="condition"><input type="checkbox" id="condition"> I Agree To All Conditions</label>
+      </div>
+      <div class="form-group">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
