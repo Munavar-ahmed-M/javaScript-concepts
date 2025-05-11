@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            display: flex;
+            margin-top: 2em;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 1em;
+        }
+        .data{
+            border: 1px solid black;
+            padding: 40px;
+        }
+        .ullist{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="data" id="local-data"></div>
+    <button class="fetch_local_data">Get Local Data</button>
+    <div class="api-data data"></div>
+    <button class="fetch_api_data">Get API Data</button>
+    <script src="fetch.js"></script>
+</body>
+</html>
