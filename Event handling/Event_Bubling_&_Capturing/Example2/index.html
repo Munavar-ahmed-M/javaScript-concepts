@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #openModel{
+            padding: 40px;
+            margin-top: 1em;
+            font-size: medium;
+            font-weight: bold;
+            background-color: black;
+            color:white;
+            cursor:pointer;
+            transition: all .2s ease;
+        }
+        #openModel:hover{
+            background-color: gray;
+        }
+        .container{
+            display: none;
+            border: 1px solid black;
+            height: 100vh;
+            background-color: gray;
+            justify-content: center;
+            align-items: center;
+        }
+        #model{
+            background-color: aliceblue;
+            padding: 2em;
+            border-radius: 4px;
+        }
+        #model h1,p,button{
+            margin-bottom: .5em;
+        }
+    </style>
+</head>
+<body>
+    <button id="openModel">Open Model</button>
+    <div class="container">
+        <div id="model">
+            <h1>Model Heading</h1>
+            <input type="text" id="typeInput">
+            <button id="closeButton">submit</button>
+        </div>
+    </div>
+    <script >
+        const modelContainer = document.querySelector('.container');
+        document.getElementById('openModel').addEventListener('click',()=>{
+            modelContainer.style.display = "flex";
+        })
+        modelContainer.addEventListener('click',(e)=>{
+            modelContainer.style.display = "none";
+        })
+        const input = document.getElementById("typeInput");
+        input.addEventListener('click',(e)=>{
+            e.stopPropagation();
+        })
+        const close = document.getElementById("closeButton");
+        close.addEventListener('click',(e)=>{
+            e.stopPropagation();
+        })
+
+    </script>
+</body>
+</html>
