@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+    <style>
+        .container{
+            background: palegoldenrod;
+            padding: 40px;
+        }
+        .dark{
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello my name is Muanvar-ahmed</h1>
+        <p>I am software developer</p>
+        <button id="btn">change theme</button>
+    </div>
+    <script>
+        const themebutton = document.getElementById("btn");
+        const container = document.querySelector(".container");
+        themebutton.addEventListener('click',()=>{
+            container.classList.toggle("dark");
+            const isDark = container.classList.contains("dark");
+            localStorage.setItem("themeProperties",isDark ? "dark" : "light");
+        })
+        window.addEventListener("DOMContentLoaded",()=>{
+            const themeValue = localStorage.getItem("themeProperties");
+            if(themeValue === "dark")
+                container.classList.add("dark");
+        })
+    </script>
+</body>
+</html>
